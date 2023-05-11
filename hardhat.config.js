@@ -1,6 +1,7 @@
 require("dotenv").config({ path: __dirname + "/.env" });
 require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-ethers");
+require("hardhat-contract-sizer");
 
 module.exports = {
   defaultNetwork: "hardhat",
