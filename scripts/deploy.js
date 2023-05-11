@@ -15,12 +15,12 @@ async function main() {
 
   await small.deployed();
 
-  console.log(`Contract less than 5kb in size deployed to ${small.address}`);
+  console.log(`Contract less than 5kb in size deployed to ${small.address} \n`);
 
   const LargeContract = await hre.ethers.getContractFactory(
     "ExampleContractLarge"
   );
-  console.log("Deploying Large contract !!!");
+  console.log("Deploying Large contract !!! \n");
   const large = await LargeContract.deploy();
 
   await large.deployed();
