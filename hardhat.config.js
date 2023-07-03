@@ -2,6 +2,8 @@ require("dotenv").config({ path: __dirname + "/.env" });
 require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-ethers");
 require("hardhat-contract-sizer");
+// hardhat.config.js
+require("@openzeppelin/hardhat-upgrades");
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -13,6 +15,18 @@ module.exports = {
       },
       {
         version: "0.5.17",
+        settings: { optimizer: { enabled: true, runs: 100 } },
+      },
+      {
+        version: "0.4.17",
+        settings: { optimizer: { enabled: true, runs: 100 } },
+      },
+      {
+        version: "0.8.2",
+        settings: { optimizer: { enabled: true, runs: 100 } },
+      },
+      {
+        version: "0.8.1",
         settings: { optimizer: { enabled: true, runs: 100 } },
       },
     ],
